@@ -39,7 +39,7 @@ footer {
 
 /* MEDIA QUERIES */
 /* Styles for devices with viewport widths of over 1024px */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     body {
         width: 999px; /* Set specific width for body */
         background-color: #f6f6f7;
