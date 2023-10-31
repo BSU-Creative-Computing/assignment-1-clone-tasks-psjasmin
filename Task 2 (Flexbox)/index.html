@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Task 2 (Flexbox)</title>
+</head>
+<body>
+    <!--Header (Website title/search button/menu)-->
+    <header>
+        <h2 class="text-icon">What's On</h2>
+        <div class="search-button">
+            <input type="text" placeholder="Search..." name="search">
+        </div>
+        <nav>
+            <a href=#>Movies</a>&nbsp;&nbsp;&nbsp;
+            <a href=#>TV</a>&nbsp;&nbsp;&nbsp;
+            <a href=#>Login</a>&nbsp;&nbsp;&nbsp;
+            <a href=#>Register</a>
+        </nav>
+    </header>
+    <!--Main Content (rows & columns)-->
+    <main>
+        <!--Movie #1: Avengers-->
+        <div class="main-column">
+            <img src="images/avengers.jpg" alt="Avengers Endgame Poster">
+            <div class="info major">
+                <h2>Avengers - Endgame</h2>
+                <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the
+                    help
+                    of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore
+                    balance to the universe.</p><br>
+                <button class="more-info">More info...</button>
+            </div>
+        </div>
+        <!--Container for Columns-->
+        <div class="others">
+            <!--Row/Column #1-->
+            <div class='page-wrapper'>
+                <div class='row'>
+                    <!--Movie #2: The Lone Gunmen-->
+                    <div class='column'>
+                        <div class='first-column'>
+                            <div class="info other space">
+                                <!--movie poster-->
+                                <img src="images/lone-gunmen.jpg" alt="The Lone Gunmen Poster">
+                                <!--title-->
+                                <h2>The Lone Gunmen</h2>
+                                <!--description-->
+                                <p>The X-Files' Lone Gunmen, investigate crimes and conspiracies, often in a silly, comedic, and
+                                    over the top fashion.</p><br>
+                                <!--more-info button-->
+                                <button class="more-info">More info...</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Movie #3: Predators-->
+                    <div class='column'>
+                        <div class='first-column'>
+                            <div class="info other space">
+                                <img src="images/predators.jpg" alt="Predators Poster">
+                                <h2>Predators</h2>
+                                <p>A group of elite warriors parachute into an unfamiliar jungle and are haunted by members of a
+                                    merciless alien race.</p><br>
+                                <button class="more-info">More info...</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Row/Column #2-->
+            <div class='some-page-wrapper'>
+                <div class='row'>
+                    <!--Movie #4: The Millenium Trilogy-->
+                    <div class='column'>
+                        <div class='second-column'>
+                            <div class="info other space">
+                                <img src="images/millenium.jpg" alt="The Millenium Trilogy Poster">
+                                <h2>The Millenium Trilogy</h2>
+                                <p>Journalist Mikael Blomkvist is aided in his search for a woman who has been missing for 40 years
+                                    by a young computer hacker.</p><br>
+                                <button class="more-info">More info...</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Movie #5: Rage-->
+                    <div class='column'>
+                        <div class='second-column'>
+                            <div class="info other space">
+                                <img src="images/rage.jpg" alt="Rage Poster">
+                                <h2>Rage</h2>
+                                <p>When the daughter of a reformed criminal is kidnapped, he rounds up his old crew and seeks his
+                                    own brand of justice.</p><br>
+                                <button class="more-info">More info...</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
