@@ -1,0 +1,117 @@
+// Defining Variables
+$main-bg : #8ccff7;
+$second-bg: #e2eff1;
+$light-blue: #4e89ae;
+$dark-blue: #43658b;
+$red: #ed6663;
+$orange: #ffa372;
+$hover: #444;
+
+// mixin for circle inline stack
+@mixin for-621px-above ($minwidth) {
+    @media screen and (min-width: $minwidth) {
+        @content;
+    }
+}
+
+// mixin for centering elements
+@mixin centerer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// mixin for circles gap and margin
+@mixin circles-gap {
+    margin: 60px 0px 60px 0px;
+    gap: 10px;
+}
+
+body {
+    margin: 0px;
+    background-color: $second-bg;
+}
+
+header {
+    background-color: $main-bg;
+    height: fit-content;
+}
+
+.images {
+    @include centerer;
+    width: 100%;
+}
+
+.container {
+    padding-top: 50px;
+}
+
+// RECTANGLE LINES
+.line-1 {
+    background-color: $light-blue;
+    height: 40px;
+    &:hover {
+        background-color: $hover;
+    }
+}
+
+.line-2 {
+    @extend .line-1;
+    background-color: $dark-blue;
+}
+
+.line-3 {
+    @extend .line-1;
+    background-color: $red;
+}
+
+.line-4 {
+    @extend .line-1;
+    background-color: $orange;
+}
+
+// CIRCLES
+.circle {
+    border-radius: 50%;
+}
+
+.circle-1 {
+    @extend .line-1;
+    height: 70px;
+    width: 70px;
+}
+
+.circle-2 {
+    @extend .line-2;
+    height: 80px;
+    width: 80px;
+}
+
+.circle-3 {
+    @extend .line-3;
+    height: 90px;
+    width: 90px;
+}
+
+.circle-4 {
+    @extend .line-4;
+    height: 100px;
+    width: 100px;
+}
+
+// Circles (vertical stack)
+.circles {
+    @include centerer;
+    @include circles-gap;
+    flex-direction: column;
+
+    // Circles (inline)
+    @include for-621px-above(621px) {
+        flex-direction: row;
+    }
+}
+
+footer {
+    background-color: $main-bg;
+    height: 50px;
+}
