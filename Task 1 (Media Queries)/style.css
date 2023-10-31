@@ -1,0 +1,99 @@
+body {
+    font-family: 'Noto Sans Mono', monospace;
+    margin: 0 auto;
+}
+
+.container {
+    background-color: #fefefd;
+    padding: 0px 10px;
+}
+
+header {
+    padding: 12px 0px 15px 6px;
+}
+
+/* Icon image */
+header img {
+    position: relative;
+    display: flex;
+    width: 55px;
+    height: auto;
+}
+
+/* Styling text information */
+article {
+    padding: 4px 6px;
+    margin-top: 0px;
+    line-height: 1.9;
+    font-size: 8.6pt;
+}
+
+/* Footer */
+footer {
+    color: #fefefd;
+    background-color: #14181d;
+    text-align: center;
+    padding: 5px;
+    font-size: 8.7pt;
+}
+
+/* MEDIA QUERIES */
+/* Styles for devices with viewport widths of over 1024px */
+@media (min-width: 1024px) {
+    body {
+        width: 999px; /* Set specific width for body */
+        background-color: #f6f6f7;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-rows: repeat (2, 1fr); /* 2 rows */
+        grid-gap: 0px 0px;
+    }
+    .grid-item img {
+        width: 100%;
+        display: block; /* removes space between images */
+    }
+}
+
+/* Styles for devices with viewport widths of 1024px */
+@media (max-width: 1024px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-rows: repeat (2, 1fr); /* 2 rows */
+        grid-gap: 0px 0px;
+    }
+    .grid-item img {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Styles for devices with viewport widths of 800px */
+@media (max-width: 800px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ; /* 2 columns */
+        grid-template-rows: repeat(3, 1fr); /* 3 rows */
+        grid-gap: 0px 0px;
+    }
+    .grid-item img {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Styles for devices with viewport widths of 480px */
+@media (max-width: 480px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr ; /* 1 column */
+        grid-template-rows: 1fr ; /* 1 row */
+        grid-gap: 0px 0px;
+    }
+    .grid-item img {
+        width: 100%;
+        display: block;
+    }
+}
