@@ -1,0 +1,134 @@
+body {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+/* Header -title/search/nav */
+header {
+    background-color: #1e90ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 18px;
+}
+
+/* Website Title */
+.text-icon {
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Search Buttons */
+.search-button input[type=text] {
+    padding: 10px 8px;
+    font-size: 10px;
+    color: #afb3b3;
+    border: 1px solid grey;
+    width: 200px;
+    background: #ffffff;
+}
+
+/* Navigation Menu */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+/* Main content Container -rows & columns */
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1000px;
+    margin: 15px auto;
+    gap: 8px;
+}
+
+.info h2 {
+    margin: 0px;
+}
+
+/* Avengers movie column */
+.main-column {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 60%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.other {
+    flex: 0 0 40%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+/* First column - lone gunmen/predators */
+.first-column {
+    align-items: stretch;
+    flex-grow: 1;
+}
+
+/* First column - TMT/rage */
+.second-column {
+    align-items: stretch;
+    flex-grow: 1;
+    margin-top: 8px;
+}
+
+
+/* Movie Description Info */
+.info {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 2px 0.5px #c1c2c2;
+    display: inline-block; 
+    font-size: 14px;
+}
+
+.major {
+    padding: 10px 15px 30px 15px;
+}
+
+.space {
+    padding: 10px 15px 15vh 15px; 
+}
+
+/* More Info Button */
+.more-info {
+    background-color: #1b98ff;
+    border: none;
+    color: white;
+    padding: 6px 8px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 4px;
+    float: right;
+    margin-right: 6px;
+}
+
+@media (max-width: 1087px) {
+    main {
+        flex-direction: column;
+    }
+    .space {
+        padding: 10px 15px 30px 15px; 
+    }
+}
