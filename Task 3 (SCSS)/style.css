@@ -1,0 +1,84 @@
+body {
+  margin: 0px;
+  background-color: #e2eff1;
+}
+
+header {
+  background-color: #8ccff7;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  padding-top: 50px;
+}
+
+.line-1, .circle-1, .line-4, .circle-4, .line-3, .circle-3, .line-2, .circle-2 {
+  background-color: #4e89ae;
+  height: 40px;
+}
+.line-1:hover, .circle-1:hover, .line-4:hover, .circle-4:hover, .line-3:hover, .circle-3:hover, .line-2:hover, .circle-2:hover {
+  background-color: #444;
+}
+
+.line-2, .circle-2 {
+  background-color: #43658b;
+}
+
+.line-3, .circle-3 {
+  background-color: #ed6663;
+}
+
+.line-4, .circle-4 {
+  background-color: #ffa372;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.circle-1 {
+  height: 70px;
+  width: 70px;
+}
+
+.circle-2 {
+  height: 80px;
+  width: 80px;
+}
+
+.circle-3 {
+  height: 90px;
+  width: 90px;
+}
+
+.circle-4 {
+  height: 100px;
+  width: 100px;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0px 60px 0px;
+  gap: 10px;
+  flex-direction: column;
+}
+@media screen and (min-width: 621px) {
+  .circles {
+    flex-direction: row;
+  }
+}
+
+footer {
+  background-color: #8ccff7;
+  height: 50px;
+}/*# sourceMappingURL=style.css.map */
