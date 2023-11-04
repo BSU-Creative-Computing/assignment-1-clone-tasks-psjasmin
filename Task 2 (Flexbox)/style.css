@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: #ffffff;
+    background-color: #eeeeee;
 }
 
 /* Header -title/search/nav */
 header {
     background-color: #1e90ff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*to align items evenly*/
     align-items: center;
-    padding: 0px 18px;
+    padding: 3px 18px;
 }
 
 /* Website Title */
@@ -18,97 +23,85 @@ header {
     color: white;
     margin-top: 15px;
     margin-bottom: 15px;
+    font-size: 1.5em;
 }
 
-/* Search Buttons */
+/* Search Button */
 .search-button input[type=text] {
     padding: 10px 8px;
-    font-size: 10px;
+    font-size: 12px;
     color: #afb3b3;
     border: 1px solid grey;
     width: 200px;
     background: #ffffff;
 }
 
-/* Navigation Menu */
+/* Navigation Menu Links */
 nav a {
     text-decoration: none;
     color: white;
     font-size: 14px;
 }
 
-/* Main content Container -rows & columns */
+/* Main content Container */
 main {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*2 columns*/
     justify-content: center;
-    width: 1000px;
+    /*to keep container in the center*/
+    width: 1050px;
     margin: 15px auto;
-    gap: 8px;
+    column-gap: 12px;
 }
 
 .info h2 {
-    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 /* Avengers movie column */
 .main-column {
     display: flex;
     flex-direction: column;
-    flex: 0 0 60%;
+    flex: 0 0 50%;
 }
 
 img {
     max-width: 100%;
 }
 
-.other {
-    flex: 0 0 40%;
+/* Container for Other Movies (4) */
+.others {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /*2 columns*/
+    grid-template-rows: repeat(2, minmax(0, 1fr)); /*2 rows*/
+    row-gap: 12px;
+    column-gap: 12px;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+/*Crop images to a square*/
+.others img {
+    width: 300px;
+    height: 270px;
+    object-fit: cover;
 }
-
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-}
-
-/* First column - lone gunmen/predators */
-.first-column {
-    align-items: stretch;
-    flex-grow: 1;
-}
-
-/* First column - TMT/rage */
-.second-column {
-    align-items: stretch;
-    flex-grow: 1;
-    margin-top: 8px;
-}
-
 
 /* Movie Description Info */
 .info {
     background-color: #ffffff;
-    box-shadow: 1px 1px 2px 0.5px #c1c2c2;
-    display: inline-block; 
+    box-shadow: 0 2px 5px 0 #c1c2c2;
     font-size: 14px;
+    line-height: 1.5em;
+    padding: 12px 12px 15px 12px;
+    display: inline-block;
 }
 
-.major {
-    padding: 10px 15px 30px 15px;
+.major p {
+    margin-bottom: 10px;
 }
 
-.space {
-    padding: 10px 15px 15vh 15px; 
+.other p {
+    margin-bottom: 30px;
 }
 
 /* More Info Button */
@@ -116,19 +109,131 @@ img {
     background-color: #1b98ff;
     border: none;
     color: white;
-    padding: 6px 8px;
+    padding: 6px 10px;
     text-align: center;
     font-size: 12px;
-    border-radius: 4px;
-    float: right;
+    border-radius: 3px;
     margin-right: 6px;
+    margin-top: 10px;
 }
 
-@media (max-width: 1087px) {
+.button {
+    display: flex;
+    /*to place button in the bottom-right corner*/
+    align-self: flex-end;
+    flex-direction: row-reverse;
+    margin-top: auto;
+}
+
+/* Footer */
+footer {
+    font-size: 0.9em;
+    text-align: center;
+    margin: 60px 0px 30px 0px;
+}
+
+
+/* MEDIA QUERIES */
+/* Viewport at 1280px */
+@media (max-width: 1280px) {
+    /*Fill the screen with the main content*/
     main {
-        flex-direction: column;
+        width: 97%;
+        margin: 20px auto;
+        min-width: 0;
+        gap: 18px;
     }
-    .space {
-        padding: 10px 15px 30px 15px; 
+    .others {
+        column-gap: 18px;
+        row-gap: 18px;
+    }
+    /*Increase the size of images in container*/
+    .others img {
+        width: 300px;
+        height: 340px;
+        object-fit: cover;
+    }
+}
+
+/* Viewport at 1024px */
+@media (max-width: 1024px) {
+    /*Main 'avengers' container to span bigger than 'other-movies' container*/
+    main {
+        width: 96%;
+        margin: 19px auto;
+        min-width: 0;
+        grid-template-columns: 2fr 1fr;
+        gap: 15px;
+    }
+    /*Move 'other-movies' container to one column*/
+    .others {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+    /*Increase the size of images in container*/
+    .others img {
+        width: 300px;
+        height: 380px;
+        object-fit: cover;
+    }
+}
+
+/* Viewport at 800px */
+@media (max-width: 800px) {
+    /*Keep main container (all content) in one column*/
+    main {
+        width: 95%;
+        margin: 17px auto;
+        min-width: 0;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    /*Change 'other-movies' container to a 2x2 grid*/
+    .others {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        column-gap: 18px;
+        row-gap: 18px;
+    }
+    /*Images in container will span to its full size*/
+    .others img {
+        width: 100%;
+        height: auto;
+    }
+    /* Search bar will not appear */
+    .element-to-remove {
+        display: none;
+    }
+}
+
+/* Viewport at 480px */
+@media (max-width: 480px) {
+    /*Keep main container (all content) in one column*/
+    main {
+        width: 94%;
+        margin: 17px auto;
+        min-width: 0;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    /*All movie containers will be in one column
+    (placed below one another)*/
+    .others {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 18px;
+    }
+    /*Images in container will span to its full size*/
+    .others img {
+        width: 100%;
+        height: auto;
+    }
+    /* Search bar will not appear */
+    .element-to-remove {
+        display: none;
     }
 }
